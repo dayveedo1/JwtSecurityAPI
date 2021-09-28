@@ -78,3 +78,4 @@ C:\Users\A\Documents\csharp\JwtSecurityApi\obj\Debug\net5.0\JwtSecurityApi.pdb
 C:\Users\A\Documents\csharp\JwtSecurityApi\obj\Debug\net5.0\JwtSecurityApi.genruntimeconfig.cache
 C:\Users\A\Documents\csharp\JwtSecurityApi\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\A\Documents\csharp\JwtSecurityApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\A\Documents\csharp\JwtSecurityApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,6 +1,8 @@
 using JwtSecurityApi.Data;
 using JwtSecurityApi.Data.Config;
 using JwtSecurityApi.Data.Model;
+using JwtSecurityApi.Data.Security;
+using JwtSecurityApi.Data.ServiceExtension;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -43,6 +45,7 @@ namespace JwtSecurityApi
             builder.AddEntityFrameworkStores<JwtSecurityDbContext>().AddDefaultTokenProviders();
 
             services.AddAuthentication();
+            services.ConfigureJwt(Configuration);
 
             services.AddCors(cs => {
                 cs.AddPolicy(AllowOrigins,
@@ -53,6 +56,7 @@ namespace JwtSecurityApi
             });
 
             services.AddAutoMapper(typeof(MapperInitializer));
+            services.AddScoped<IAuthManager, AuthManager>();
 
             services.AddSwaggerGen(c =>
             {
@@ -62,7 +66,6 @@ namespace JwtSecurityApi
 
             services.AddControllers();
 
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -90,6 +93,8 @@ namespace JwtSecurityApi
 
             app.UseCors("AllowOrigins");
 
+            app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             //app.UseEndpoints(endpoints =>
