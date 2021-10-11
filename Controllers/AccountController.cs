@@ -34,6 +34,11 @@ namespace JwtSecurityApi.Controllers
             this.mapper = mapper;
         }
 
+        /// <summary>
+        /// Endpoint to register a new user
+        /// </summary>
+        /// <param name="userDto"></param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -72,6 +77,11 @@ namespace JwtSecurityApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint to login & generate token
+        /// </summary>
+        /// <param name="userDto"></param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -106,6 +116,10 @@ namespace JwtSecurityApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Test endpoint
+        /// </summary>
+        /// <returns></returns>
         [Authorize(Roles ="User")]
         [HttpGet("GetTest")]
         public string GetTest()

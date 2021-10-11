@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\PublishedAPIs\JwtSecurityAPI</_PublishTargetUrl>
+    <History>True|2021-10-04T15:49:06.6129315Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="JwtSecurityAPI">
+      <Value>Server=DESKTOP-SCBT1Q0%3bDatabase=JwtSecurityAPI%3bTrusted_Connection=false%3bMultipleActiveResultSets=true%3bUser ID=sa%3bPassword=Amademeka1%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="JwtSecurityApi.Data.JwtSecurityDbContext">
+      <Value>Server=DESKTOP-SCBT1Q0%3bDatabase=JwtSecurityAPI%3bTrusted_Connection=false%3bMultipleActiveResultSets=true%3bUser ID=sa%3bPassword=Amademeka1%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
